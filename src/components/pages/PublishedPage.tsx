@@ -15,7 +15,7 @@ const PublishedBrain = () => {
     const [user,setUser]=useState()
 
     const {hash}=useParams()
-    console.log("hash from useParams",hash)
+    // console.log("hash from useParams",hash)
    if(!hash)return 
    
     useEffect(()=>{
@@ -29,8 +29,8 @@ const PublishedBrain = () => {
             }
         })
         
-        console.log(response.data.content)
-        console.log("Content from Published Brain",response.data.content[0].userId.email)
+        // console.log(response.data.content)
+        // console.log("Content from Published Brain",response.data.content[0].userId.email)
         setPublicContent(response.data.content)
         setUser(response.data.content[0].userId.email)
         

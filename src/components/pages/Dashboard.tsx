@@ -76,12 +76,12 @@ const navigate=useNavigate()
 
 
       })
-      console.log(response.data.hash)
+      // console.log(response.data.hash)
       const hash = response?.data?.hash;
       if (hash) {
-        const baseUrl = "http://localhost:5173/share";
+        const baseUrl = "https://brainly-100xdevs.vercel.app/share";
         setShareUrl(`${baseUrl}/${hash}`);
-        console.log("Updated Share URL:", `${baseUrl}/${hash}`);
+        // console.log("Updated Share URL:", `${baseUrl}/${hash}`);
         toast.success("Brain Published", {
           duration: 3000, position: 'top-center',
           style: {
@@ -107,7 +107,7 @@ console.log(type)
       console.log(allContentAtomValue)
       const typeItem = allContentAtomValue.filter((c) => c.type == type.toLowerCase()
       );
-      console.log("content after filter",typeItem)
+      // console.log("content after filter",typeItem)
       setContent(typeItem);
     
     }

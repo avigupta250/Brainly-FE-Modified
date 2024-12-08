@@ -48,7 +48,7 @@ export function SignIn() {
                 
               });
               localStorage.setItem("token",response.data.token)
-              console.log("Response Data:", response.data);
+            //   console.log("Response Data:", response.data);
               setLoading(false)
               toast.success("Logged In ", {
                 duration: 3000, position: 'top-center',
@@ -62,7 +62,7 @@ export function SignIn() {
             navigate("/dashboard")
               
             } catch (error:any) {
-                console.error("Error fetching data:", error);
+                // console.error("Error fetching data:", error);
                 toast.error(`${error?.response?.data?.message}`,{duration:3000,position:'top-center',
                     style: {
                         background: '#363636',
