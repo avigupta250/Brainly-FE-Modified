@@ -1,11 +1,10 @@
 
 import { useForm } from "react-hook-form"
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { apiConnector } from "../../operations/apiconnector";
 import { endPoints } from "../../operations/api";
 import toast from "react-hot-toast";
 import { useState } from "react";
-import { TiArrowRight } from "react-icons/ti";
 import { FaArrowRight } from "react-icons/fa";
 
 
@@ -16,7 +15,7 @@ export function SignUp() {
 
 
     const navigate = useNavigate()
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit,  } = useForm();
     const [loading, setLoading] = useState(false)
 
     const onSubmit = (data: any) => {
@@ -34,7 +33,7 @@ export function SignUp() {
                         },
                     })
                 }, 5000);
-                const response = await apiConnector({
+                 await apiConnector({
                     method: "post",
                     url: endPoints.SIGN_UP,
                     bodyData: {

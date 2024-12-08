@@ -5,7 +5,6 @@ import { endPoints } from '../../operations/api'
 
 import { useRecoilValue } from 'recoil'
 import { contentAtom } from '../Recoil/store/atom/contentAtom'
-import { Card } from '../cards/DashBoardCard'
 import { PublishedCard } from '../cards/PublishedCard'
 
 

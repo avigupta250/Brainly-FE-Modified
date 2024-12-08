@@ -1,9 +1,9 @@
-import { ThreeDCardDemo } from "../shadcn/Card";
+
 
 import { FaHome, FaUser } from "react-icons/fa";
 import { FaMessage } from "react-icons/fa6";
 import { FloatingNav } from "../ui/floating-navBar";
-import { Cover } from "../ui/cover";
+
 import { GoogleGeminiEffectDemo } from "../shadcn/GoogleGemini";
 import { BentoGridThirdDemo } from "../shadcn/BentoGrid";
 

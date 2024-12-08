@@ -9,10 +9,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import  { Toaster } from 'react-hot-toast';
 import ProtectedRoute from './components/RouteType/ProtectedRoute'
 import { BentoGridThirdDemo } from './components/shadcn/BentoGrid'
-import { FloatingNav } from './components/ui/floating-navBar'
-import { FaHome, FaUser } from 'react-icons/fa'
-import { FaMessage } from 'react-icons/fa6'
-import { Shimmer } from './components/cards/Shimmer'
+
 import PublishedBrain from './components/pages/PublishedPage'
 
 

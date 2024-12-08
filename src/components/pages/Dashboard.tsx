@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaYoutube, FaTwitter, FaMusic, FaLink, FaPlus, FaShare, FaHome, FaUser } from "react-icons/fa";
+import { FaYoutube, FaTwitter, FaMusic, FaLink, FaPlus, FaShare} from "react-icons/fa";
 import Brain1 from "../../assets/Brain1 (1).png"
 import { AddContentModal } from "../Modals/AddContentModal";
 import { ShareModal } from "../Modals/ShareModal";
@@ -10,7 +10,7 @@ import { Card } from "../cards/DashBoardCard";
 import { apiConnector } from "../../operations/apiconnector";
 import { endPoints } from "../../operations/api";
 import toast from "react-hot-toast";
-import { FaBrain,FaMessage } from "react-icons/fa6";
+import { FaBrain} from "react-icons/fa6";
 
 import { IconLogout } from "@tabler/icons-react";
 import { LogOutModal } from "../Modals/LogOutModal";

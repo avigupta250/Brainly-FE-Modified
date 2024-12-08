@@ -8,8 +8,8 @@ import {
 } from "framer-motion";
 import { cn } from "../../lib/utils";
 // import Link from "@next/link";
-import { Link, useNavigate } from "react-router-dom";
-import { IconLogout } from "@tabler/icons-react";
+import {  useNavigate } from "react-router-dom";
+
 import toast from "react-hot-toast";
 
 export const FloatingNav = ({
