@@ -4,7 +4,14 @@ import { endPoints } from "../../operations/api";
 import { useRecoilValue} from "recoil";
 import {  contentRefreshTriggerAtom } from "../Recoil/store/atom/contentAtom";
 
-export default function useGetContent() {
+
+interface UseGetContentProps {
+  // fetched: boolean;
+  setFetched: (value: boolean) => void;
+}
+
+
+export default function useGetContent({setFetched}:UseGetContentProps) {
   const [content, setContent] = useState([]);
 
 
@@ -24,6 +31,8 @@ export default function useGetContent() {
 
         console.log("response from getConetntt", response);
         setContent(response.data.content);
+        setFetched(true)
+       
       } catch (err) {}
     }
 

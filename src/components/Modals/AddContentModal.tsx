@@ -156,7 +156,7 @@ export function AddContentModal({ open, onClose }: ModalProps) {
                             }
 
                         </select>
-                        <span className="text-gray-600 mt-[38px] ml-[270px] w-1 h-1 absolute"><FaArrowDown /></span>
+                        <span className="text-gray-600 mt-[38px] ml-[190px] w-1 h-1 absolute"><FaArrowDown /></span>
                     </div>
 {/* Description */}
 <div className="flex flex-col">
@@ -185,10 +185,10 @@ export function AddContentModal({ open, onClose }: ModalProps) {
                                     </div>
                                 ))
                             }
-                            <input className="" placeholder="Select tags"></input>
+                            <input className="  focus:outline-none w-20" placeholder="Select tags"></input>
                         </div>
                         {
-                            tagModal && <div className="bg-white h-28  absolute overflow-y-scroll z-10 w-full mt-16 rounded-md">
+                            tagModal && <div className="bg-white h-28  absolute overflow-y-scroll z-10 w-full mt-24 rounded-md">
                                 <ul>
                                     {tag.map((tag, index) => (
                                         <li key={index} onClick={() => setSelectedTag(prev => [...prev, tag])} className="border cursor-pointer p-1">{tag?.title}</li>
@@ -199,7 +199,7 @@ export function AddContentModal({ open, onClose }: ModalProps) {
                         <span onClick={(e) => {
                             setTagModal(c => !c)
                             e.stopPropagation()
-                        }} className="text-gray-600 cursor-pointer mt-[38px] ml-[270px] w-1 h-1 absolute"><FaArrowDown /></span>
+                        }} className="text-gray-600 cursor-pointer mt-[38px] ml-[190px] w-1 h-1 absolute"><FaArrowDown /></span>
                     </div>
 
 

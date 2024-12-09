@@ -24,7 +24,7 @@ export function DashBoard() {
   const navigate = useNavigate()
   const [open, setOpen] = useState(true);
   const [filter, setFilter] = useState("My Brain");
-  const [fetched, setFethced] = useState(false);
+  const [fetched, setFetched] = useState(false);
 
   const Menus = [
     { title: "My Brain", src: <FaBrain /> },
@@ -45,15 +45,12 @@ export function DashBoard() {
   const content = useRecoilValue(contentAtom);
 
   const allContentAtomValue = useRecoilValue(allContentAtom)
-  const allContent = useGetContent();
-
+  const allContent = useGetContent({setFetched});
+console.log(fetched)
 
 
   useEffect(() => {
-    const clock = setTimeout(() => {
-      setFethced(true);
-    }, 3000)
-
+   
     if (allContent) {
       setContent(allContent);
       setAllContent(allContent);
@@ -61,9 +58,7 @@ export function DashBoard() {
 
 
     }
-    return () => {
-      clearTimeout(clock)
-    }
+ 
 
   }, [allContent])
 
@@ -236,7 +231,7 @@ export function DashBoard() {
               ))
             ) : (
 
-              fetched ? (content.length == 0 ? <div className="text-white "> No content</div> : <Shimmer />) : <Shimmer />
+              fetched ? (content.length === 0 ? <div className="text-white  justify-center items-center "> No content</div> : <Shimmer />) : <Shimmer />
             )}
           </div>
 
