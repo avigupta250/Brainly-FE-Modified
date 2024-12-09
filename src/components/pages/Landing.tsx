@@ -1,7 +1,7 @@
 
 
-import { FaHome, FaUser } from "react-icons/fa";
-import { FaMessage } from "react-icons/fa6";
+import { FaHome, } from "react-icons/fa";
+
 import { FloatingNav } from "../ui/floating-navBar";
 
 import { GoogleGeminiEffectDemo } from "../shadcn/GoogleGemini";
@@ -45,8 +45,8 @@ export function LandingPage(){
     
        <ThreeDCardDemo/>
        </div> */}
-     <div className=" mt-[100px]">
-       <div className="">
+     <div className="bg-black min-h-screen mt-[100px]">
+       <div className=" m-6">
        < BentoGridThirdDemo/>
        </div>
        {/* <ThreeDCardDemo/> */}
