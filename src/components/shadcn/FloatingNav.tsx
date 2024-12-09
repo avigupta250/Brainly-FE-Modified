@@ -10,12 +10,12 @@ import { ThreeDCardDemo } from "./Card";
 export function FloatingNavDemo() {
   const navItems = [
     {
-      name: "Home",
+      name: "Hom",
       link: "/",
       icon: <FaHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "About",
+      name: "Dashboard",
       link: "/about",
       icon: <FaUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },

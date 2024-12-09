@@ -10,7 +10,7 @@ function ProtectedRoute({children}:ChildrenProps):ReactElement{
     const token =localStorage.getItem("token");
     
     if(token==null){
-        return <Navigate to="/"  />;
+        return <Navigate to="/signin"  />;
     }else{
         return children
     }
