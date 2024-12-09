@@ -116,7 +116,7 @@ export function AddContentModal({ open, onClose }: ModalProps) {
 
     return <> {open && <div onClick={onClose} className="fixed inset-0 z-[1000] grid place-items-center overflow-auto bg-opacity-90 backdrop-blur-sm transition-all duration-300">
 
-        <div onClick={(e) => e.stopPropagation()} className="bg-black p-4 border rounded-lg text- w-[300px] ">
+        <div onClick={(e) => e.stopPropagation()} className="bg-black p-4 border rounded-lg text-black w-[300px] ">
             <div className="mt-10 p-6 max-w-md mx-auto bg-black shadow-lg rounded-lg">
                 <form onSubmit={handleSubmit(submit)} className="flex flex-col gap-2">
                     {/* Title Field */}
