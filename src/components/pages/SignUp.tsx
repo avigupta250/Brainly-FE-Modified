@@ -19,12 +19,14 @@ export function SignUp() {
     const [loading, setLoading] = useState(false)
 
     const onSubmit = (data: any) => {
+        
         const fetchData = async () => {
+            let clock
             try {
                 setLoading(true)
 
 
-                const clock=  setTimeout(() => {
+                 clock=  setTimeout(() => {
                     toast.loading("Backend is hosted on free cluster.So it may take longer.", {
                         duration: 7000, position: 'top-center',
                         style: {
@@ -33,7 +35,7 @@ export function SignUp() {
                         },
                     })
                 }, 5000);
-                 await apiConnector({
+           const response= await apiConnector({
                     method: "post",
                     url: endPoints.SIGN_UP,
                     bodyData: {
@@ -53,9 +55,9 @@ export function SignUp() {
                     },
                 })
 
-
-                navigate("/signin")
                 clearInterval(clock)
+                navigate("/signin")
+               
                
             } catch (error: any) {
                
@@ -67,6 +69,8 @@ export function SignUp() {
                         color: '#fff',
                     },
                 })
+                setLoading(false)
+                clearInterval(clock)
             }
         };
 
@@ -85,16 +89,16 @@ export function SignUp() {
             <form onSubmit={handleSubmit(onSubmit)}>
 
                 <div className="flex flex-col  p-3 gap-2 rounded-lg">
-                    <h1 className="text-[30px] font-bold">Welcome to Second Brain</h1>
+                    <h1 className="text-[30px] text-orange-500 font-bold ">Welcome to Brainly</h1>
                     {/* firstname and lastnae */}
-                    <div className=" sm:flex gap-3">
+                    <div className=" sm:flex mt-4 gap-3">
                         <div className="flex flex-col gap-1">
                             <label>Firstname</label>
                             <input placeholder="Firstname" className="border text-black p-1  rounded-md focus:outline-none bg-slate-00 focus:ring-2 focus:ring-blue-500" {...register('firstName')} />
                         </div>
                         <div className="flex gap-1 flex-col">
                             <label>Lastname</label>
-                            <input className="border p-1 text-black  rounded-md focus:outline-none bg-slate-00 focus:ring-2 focus:ring-blue-500" {...register('lastName')} />
+                            <input placeholder="Lastname" className="border p-1 text-black  rounded-md focus:outline-none bg-slate-00 focus:ring-2 focus:ring-blue-500" {...register('lastName')} />
                         </div>
                     </div>
 

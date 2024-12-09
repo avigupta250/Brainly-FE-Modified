@@ -83,7 +83,7 @@ export function SignIn() {
             <form onSubmit={handleSubmit(onSubmit)}>
               
                 <div className="flex flex-col  p-3 gap-2 rounded-lg">
-                <h1 className="text-[30px] font-bold">Welcome to Second Brain</h1>
+                <h1 className="text-[20px] text-orange-600 font-bold">SignIn to continue</h1>
                     {/* firstname and lastnae */}
                    
 

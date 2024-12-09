@@ -45,8 +45,8 @@ export function LandingPage(){
     
        <ThreeDCardDemo/>
        </div> */}
-     <div className="bg-black min-h-screen mt-[100px]">
-       <div className=" m-6">
+     <div className="bg-black min-h-screen mt-[10px]">
+       <div className=" p-8">
        < BentoGridThirdDemo/>
        </div>
        {/* <ThreeDCardDemo/> */}
