@@ -188,7 +188,7 @@ export function AddContentModal({ open, onClose }: ModalProps) {
                             <input className="  focus:outline-none w-20" placeholder="Select tags"></input>
                         </div>
                         {
-                            tagModal && <div className="bg-white h-28  absolute overflow-y-scroll z-10 w-full mt-24 rounded-md">
+                            tagModal && <div className="bg-white h-28  absolute overflow-y-scroll z-10 w-full mt-16 rounded-md">
                                 <ul>
                                     {tag.map((tag, index) => (
                                         <li key={index} onClick={() => setSelectedTag(prev => [...prev, tag])} className="border cursor-pointer p-1">{tag?.title}</li>
