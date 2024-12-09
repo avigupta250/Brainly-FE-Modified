@@ -6,6 +6,7 @@ import { endPoints } from "../../operations/api";
 import toast from "react-hot-toast";
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { IoEyeOff, IoEyeSharp } from "react-icons/io5";
 
 
 export function SignUp() {
@@ -17,6 +18,7 @@ export function SignUp() {
     const navigate = useNavigate()
     const { register, handleSubmit,  } = useForm();
     const [loading, setLoading] = useState(false)
+    const [showPass,setShowPass]=useState(false)
 
     const onSubmit = (data: any) => {
         
@@ -92,7 +94,7 @@ export function SignUp() {
                     <h1 className="text-[30px] text-orange-500 font-bold ">Welcome to Brainly</h1>
                     {/* firstname and lastnae */}
                     <div className=" sm:flex mt-4 gap-3">
-                        <div className="flex flex-col gap-1">
+                        <div className="flex flex-col  gap-1">
                             <label>Firstname</label>
                             <input placeholder="Firstname" className="border text-black p-1  rounded-md focus:outline-none bg-slate-00 focus:ring-2 focus:ring-blue-500" {...register('firstName')} />
                         </div>
@@ -117,7 +119,9 @@ export function SignUp() {
                     {/* password */}
                     <div className="flex flex-col gap-1">
                         <label>Password</label>
-                        <input type="password" placeholder="Password" className="p-1 text-black rounded-md" {...register('password')} />
+                        <input  type={`${showPass?"text":"password"}`} placeholder="Password" className="p-1 text-black rounded-md" {...register('password')} />
+                           { !showPass?  <span  onClick={()=>setShowPass(c=>!c)} className="absolute mt-[34px] text-xl ml-60 text-gray-800"><IoEyeOff /></span>:<span onClick={()=>setShowPass(c=>!c)} className="absolute mt-[34px] text-xl ml-60 text-gray-800"><IoEyeSharp /></span>
+                    }
                     </div>
 
                     <button className="bg-slate-600 p-2 flex justify-center items-center gap-2 text-white font-mono  font-bold mt-4 rounded-md"><span>Sign Up </span>{loading ? <span className="loader "></span> : <span className=""><FaArrowRight /></span>}</button>

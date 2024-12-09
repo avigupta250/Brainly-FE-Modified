@@ -6,6 +6,7 @@ import { apiConnector } from "../../operations/apiconnector";
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import toast from "react-hot-toast";
+import { IoEyeOff,IoEyeSharp } from "react-icons/io5";
 
 
 
@@ -19,6 +20,7 @@ export function SignIn() {
     const [loading,setLoading]=useState(false);
     const navigate =useNavigate()
     const { register, handleSubmit} = useForm();
+    const [showPass,setShowPass]=useState(false)
 
     const onSubmit= (data:any) => {
         console.log('Form Data:', data);
@@ -102,8 +104,9 @@ export function SignIn() {
 {/* password */}
                     <div className="flex flex-col gap-1">
                         <label>Password</label>
-                        <input type="password" placeholder="Password" className="p-1 text-black rounded-md" {...register('password')} />
-                    </div>
+                        <input type={`${showPass?"text":"password"}`} placeholder="Password" className="p-1 text-black rounded-md" {...register('password')} />
+                   { !showPass?  <span  onClick={()=>setShowPass(c=>!c)} className="absolute mt-[34px] text-xl ml-44 text-gray-800"><IoEyeOff /></span>:<span onClick={()=>setShowPass(c=>!c)} className="absolute mt-[34px] text-xl ml-44 text-gray-800"><IoEyeSharp /></span>
+                    }</div>
 
                     <button className="bg-slate-600 p-2 flex justify-center items-center gap-2 text-white font-mono font-bold mt-4 rounded-md hover:bg-slate-700"><span>Sign In </span>{loading ? <span className="loader "></span> : <span className=""><FaArrowRight /></span>}</button>
 <h1>Create new account? <span onClick={()=>{
