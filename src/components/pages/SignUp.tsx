@@ -35,7 +35,7 @@ export function SignUp() {
                         },
                     })
                 }, 5000);
-           const response= await apiConnector({
+           await apiConnector({
                     method: "post",
                     url: endPoints.SIGN_UP,
                     bodyData: {
