@@ -81,10 +81,13 @@ export function PublishedCard(props: CardProps) {
                     </div>
                     {/* https://www.youtube.com/watch?v=0BDt08x-De8 */}
                 </div>) : (props.type === "twitter") ?
-                    (<div className="h-[200px] overflow-y-scroll">
-                        <blockquote className="twitter-tweet">
+                    (<div className="">
+                        {/* <blockquote className="twitter-tweet">
                             <a href={props.link}></a>
-                        </blockquote>
+                        </blockquote> */}
+                        <div className="">
+                            <img width={""} className="rounded-md " src="https://store-images.microsoft.com/image/apps.57874.9007199266244427.12d00104-ac5d-4406-ad7b-66f678d54e19.e9fa7d2a-16a1-437c-bbd5-cf0e4e2d2c70" />
+                        </div>
                         <div className="flex flex-col  ">
                         <span className="bg-blue-500 w-fit px-1 rounded-lg mt-2">{props.type.charAt(0).toUpperCase() + props.type.slice(1)}</span>
                             <p className="mt-4 text-gray-300 font p-">{props.desc}</p>
