@@ -10,7 +10,7 @@ export function FlipWordsDemo() {
        <span className="text-blue-400">Build 100X</span>
        <span className="w-16 h-6"><FlipWords words={words} /></span> 
          <br />
-        with <span className="text-orange-500 font-semibold">Second Brain</span>
+        with <span className="text-orange-500 font-semibold">Brainly</span>
       </div>
     </div>
   );
