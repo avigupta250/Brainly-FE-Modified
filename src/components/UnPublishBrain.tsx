@@ -72,9 +72,9 @@ export default function UnPublishBrain({shareUrl}:any) {
   
       
       
-      {<div className="relative inline-flex items-center cursor-pointer">
-        <span className={`text-[20px]  font-medium ${status === "true" ? "text-blue-400" : "text-gray-600"}`}>
-          {status === "true" ? " Brain Published " : "Unpublished"}
+      {status=="true" &&<div className="relative inline-flex items-center cursor-pointer">
+        <span className={`text-[15px] md:text-[20px]  font-medium ${status === "true" ? "text-blue-400" : "text-gray-600"}`}>
+          {status === "true" ? " Share Mode " : "Unpublished"}
         </span>
         {" "}
         {/* Toggle button container */}
