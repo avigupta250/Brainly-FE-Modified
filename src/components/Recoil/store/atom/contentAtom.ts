@@ -1,6 +1,7 @@
 import {atom} from "recoil"
 
 interface ContentItem {
+   _id:string
     type: string
     title: string;
     link:string ,

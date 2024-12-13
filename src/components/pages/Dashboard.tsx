@@ -143,7 +143,7 @@ console.log(fetched)
     <>
 
       <div className="flex max-h-screen w-full overflow-x-hidden  bg-black">
-
+     
         <AddContentModal open={openModal} onClose={() => setOpenModal(c => !c)} />
         <ShareModal open={openShareModal} shareUrl={shareUrl} onClose={() => setOpenShareModal(c => !c)} />
         <LogOutModal open={openLogOutModal} onClose={() => setOpenLogOutModal(c => !c)} />
@@ -224,9 +224,11 @@ console.log(fetched)
 
           <div className="flex w-full justify-center mt-16 bg-black items-center gap-5  flex-wrap">
             {content?.length > 0 ? (
-              content.map(({ type, link, title, tags, description }, index) => (
+              content.map(({ type,_id, link, title, tags, description }, index) => (
+                
                 <div key={index} className='min-h-[300px]  hover:scale-105 transition-all duration-200'>
-                  <Card tags={tags} desc={description} type={type} title={title} link={link} />
+                  
+                  <Card _id={_id} tags={tags} desc={description} type={type} title={title} link={link} />
                 </div>
               ))
             ) : (
