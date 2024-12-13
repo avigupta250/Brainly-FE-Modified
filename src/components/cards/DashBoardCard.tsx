@@ -1,6 +1,5 @@
 
 import { RiLinksFill } from "react-icons/ri";
-import { MdEditDocument } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import toast from "react-hot-toast";
 import { apiConnector } from "../../operations/apiconnector";
