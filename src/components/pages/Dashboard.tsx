@@ -16,6 +16,7 @@ import { IconLogout } from "@tabler/icons-react";
 import { LogOutModal } from "../Modals/LogOutModal";
 import { useNavigate } from "react-router-dom";
 import { Shimmer } from "../cards/Shimmer";
+import UnPublishBrain from "../UnPublishBrain";
 
 
 export function DashBoard() {
@@ -217,9 +218,9 @@ console.log(fetched)
 
         <div className="overflow-y-scroll  flex-1 p-7">
 
-          <div className={`text-2xl  bg-black  flex justify-between text-white  font-semibold `}>
+          <div className={`text-2xl  bg-black  flex justify-between items-center text-white  font-semibold `}>
             Workspace
-
+            <UnPublishBrain shareUrl={shareUrl} />
           </div>
 
           <div className="flex w-full justify-center mt-16 bg-black items-center gap-5  flex-wrap">

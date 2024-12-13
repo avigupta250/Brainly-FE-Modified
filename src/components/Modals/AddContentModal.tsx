@@ -5,7 +5,6 @@ import { FaArrowDown, FaArrowRight } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { apiConnector } from "../../operations/apiconnector";
 import { endPoints } from "../../operations/api";
-
 import toast from "react-hot-toast";
 import { useSetRecoilState } from "recoil";
 import { contentAtom, contentRefreshTriggerAtom } from "../Recoil/store/atom/contentAtom";
@@ -117,7 +116,10 @@ export function AddContentModal({ open, onClose }: ModalProps) {
     return <> {open && <div onClick={onClose} className="fixed inset-0 z-[1000] grid place-items-center overflow-auto bg-opacity-90 backdrop-blur-sm transition-all duration-300">
 
         <div onClick={(e) => e.stopPropagation()} className="bg-black p-4 border rounded-lg text-black w-[300px] ">
-            <div className="mt-10 p-6 max-w-md mx-auto bg-black shadow-lg rounded-lg">
+        <span onClick={onClose} className="text-white  hover:text-red-600 flex justify-end cursor-pointer text-[30px]">
+        <RxCross2/></span>
+            <div className="mt- p-6 max-w-md mx-auto bg-black shadow-lg rounded-lg">
+              
                 <form onSubmit={handleSubmit(submit)} className="flex flex-col gap-2">
                     {/* Title Field */}
                     <div className="flex flex-col">
