@@ -1,5 +1,6 @@
 "use client";
 import { cn } from "../../lib/utils";
+import Brain1 from "../../assets/Brain1 (1).png"
 
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import {
@@ -10,6 +11,7 @@ import {
   IconTableColumn,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 // import Image from "next/image";
 
 export function BentoGridThirdDemo() {
@@ -187,32 +189,36 @@ const SkeletonFour = () => {
         className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
       >
         <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
-          alt="avatar"
+          src={Brain1} alt="avatar"
           height="100"
           width="100"
           className="rounded-full h-10 w-10"
         />
+        <Link to="https://github.com/avigupta250/Brainly-FE-Modified">
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Avi's Portfolio
+        BrainlyX100devs
         </p>
+        </Link>
         <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Delusional
+         Brainly Github
         </p>
+        
       </motion.div>
       <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
         <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="https://yt3.googleusercontent.com/MeY_fGNrjVLV0PVOBN7dRWzMBS0y41YGm55LOaJ02cXV82a7Np9pYxxhHFqdYdncEy1I2cYR=s900-c-k-c0x00ffffff-no-rj"
           alt="avatar"
           height="100"
           width="100"
           className="rounded-full h-10 w-10"
         />
+        <Link to="https://x.com/kirat_tw?t=NbCYOU9NR_3npu_GWYDLTw&s=09">
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Tailwind CSS is cool, you know
+         Guru @kirat_tw
         </p>
+        </Link>
         <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Sensible
+         Guru
         </p>
       </motion.div>
       <motion.div
@@ -220,17 +226,18 @@ const SkeletonFour = () => {
         className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
       >
         <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
-          alt="avatar"
+          src="https://store-images.s-microsoft.com/image/apps.45406.9007199266244427.4d45042b-d7a5-4a83-be66-97779553b24d.2a88a418-b96d-44a6-ad4f-5e0ee6289b2c"   alt="avatar"
           height="100"
           width="100"
           className="rounded-full h-10 w-10"
         />
+        <Link to="https://x.com/dev_buoy?t=LfTZdBQfGZk2UW6SAfK_hA&s=09" target="__blank">
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          I love angular, RSC, and Redux.
+          @dev_buoy
         </p>
+        </Link>
         <p className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Helpless
+          Chela
         </p>
       </motion.div>
     </motion.div>
@@ -273,22 +280,19 @@ const SkeletonFive = () => {
         className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-start space-x-2 bg-white dark:bg-black"
       >
         <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
-          alt="avatar"
+          src={Brain1}     alt="avatar"
           height="100"
           width="100"
           className="rounded-full h-10 w-10"
         />
         <p className="text-xs text-neutral-500">
-          There are a lot of cool framerworks out there like React, Angular,
-          Vue, Svelte that can make your life ....
-        </p>
+         Make your life simpler with brainly</p>
       </motion.div>
       <motion.div
         variants={variantsSecond}
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
       >
-        <p className="text-xs text-neutral-500">Use PHP.</p>
+        <p className="text-xs text-neutral-500">Use Brainly</p>
         <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
       </motion.div>
     </motion.div>
