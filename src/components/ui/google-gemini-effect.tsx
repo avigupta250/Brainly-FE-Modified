@@ -34,6 +34,7 @@ export const GoogleGeminiEffect = ({
       const pageHeight = document.documentElement.scrollHeight; 
 
       const fortyPercentHeight = 0.2 * (pageHeight - windowHeight);
+      console.log(scrollPosition)
 
       if (scrollPosition >= fortyPercentHeight) {
       

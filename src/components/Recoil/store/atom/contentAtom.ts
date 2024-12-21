@@ -27,5 +27,5 @@ export const allContentAtom = atom<ContentItem[]>({
 
 export const contentRefreshTriggerAtom = atom({
   key: "contentRefreshTriggerAtom",
-  default: 0, // Default trigger value
+  default: 0, 
 });

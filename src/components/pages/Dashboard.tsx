@@ -47,7 +47,8 @@ export function DashBoard() {
 
   const allContentAtomValue = useRecoilValue(allContentAtom)
   const allContent = useGetContent({setFetched});
-console.log(fetched)
+
+
 
 
   useEffect(() => {
@@ -55,9 +56,6 @@ console.log(fetched)
     if (allContent) {
       setContent(allContent);
       setAllContent(allContent);
-
-
-
     }
  
 
@@ -127,14 +125,14 @@ console.log(fetched)
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setOpen(false)
-      } // `md` breakpoint is 768px
+      } 
     };
 
-    // Initial check and event listener
+    
     handleResize();
     window.addEventListener('resize', handleResize);
 
-    // Cleanup listener on unmount
+   
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
